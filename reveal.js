@@ -8,4 +8,4 @@ function toggle_visibility(cl){
 
 setTimeout(function() {
     toggle_visibility('showMe');
-}, 8000);
+}, 5000);

@@ -29,7 +29,6 @@
     font-family: "Courier New", Courier, monospace;
     font-size: 1em;
     padding: 1.5em 1em;
-    width: 12em;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     position: relative;
@@ -86,7 +85,7 @@
     white-space: nowrap;
     overflow: hidden;
     border-right: 0.2em solid green; /* Cursor */
-    animation: typeAndDelete 4s steps(11) forwards,
+    animation: typeAndDelete 4s steps(11) infinite,
       blinkCursor 0.5s step-end infinite;
     margin-top: 1.5em;
   }
