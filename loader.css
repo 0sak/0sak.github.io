@@ -6,8 +6,13 @@
   .loader > * {
     color: white;
   }
+
   .loader span {
     display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
   }
   .loader span:nth-child(2) {
     letter-spacing: -1em;
@@ -38,17 +43,4 @@
         height:0;
         overflow:hidden;
     }
-}
-
-#showMe{
-  animation-fill-mode: backwards;
-  animation: cssShow 0s ease-in 8s backwards;
-}
-
-@keyframes cssShow {
-  to {
-      width: 100%;
-      height: 100%;
-      overflow:visible;
-  }
 }

@@ -36,7 +36,6 @@
     position: relative;
     overflow: hidden;
     box-sizing: border-box;
-    visibility:hidden;
   }
   
   .terminal-header {

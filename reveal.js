@@ -1,4 +1,11 @@
-function showIt() {
-    document.getElementById("showMe").style.visibility = "visible";
-  }
-  setTimeout("showIt()", 8000); // after 5 secs
+function toggle_visibility(cl){
+    var els = document.getElementsByClassName(cl);
+    for (var i = 0; i < els.length; i++){
+       var s = els[i].style;
+       s.visibility = "visible";
+    }
+ }
+
+setTimeout(function() {
+    toggle_visibility('showMe');
+}, 8000);
