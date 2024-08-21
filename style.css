@@ -11,8 +11,15 @@
     /* -1/2 height */
   }
 
-.main{
-body {background-color: black;}
-h1 {background-color: white;}
-p {background-color: white;}
+.main_back{
+    background-color: black;
+}
+
+.main_text
+{
+    background-color: white;
+}
+
+#preload{
+    margin: 0 auto;
 }
