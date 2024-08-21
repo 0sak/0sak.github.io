@@ -1,23 +1,11 @@
-.box {
-    background-color: black;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 20px;
-    height: 20px;
-    margin-left: -10px;
-    /* -1/2 width */
-    margin-top: -10px;
-    /* -1/2 height */
-  }
-
 .main_back{
     background-color: black;
+    text-align: center;
 }
 
 .main_text
 {
-    background-color: white;
+    color: white;
 }
 
 #preload{
