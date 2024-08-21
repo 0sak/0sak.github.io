@@ -1,4 +1,4 @@
-/* From Uiverse.io by jeremyssocial */ 
+/* From Uiverse.io by vikas7754 */ 
 @keyframes blinkCursor {
     50% {
       border-right-color: transparent;
@@ -10,10 +10,12 @@
     10% {
       width: 0;
     }
+  
     45%,
     55% {
-      width: 6.2em;
-    } /* adjust width based on content */
+      width: 5em;
+    }
+  
     90%,
     100% {
       width: 0;
@@ -21,43 +23,37 @@
   }
   
   .terminal-loader {
-    border: 0.1em solid #333;
-    background-color: #1a1a1a;
-    color: #0f0;
-    font-family: "Courier New", Courier, monospace;
-    font-size: 1em;
-    padding: 1.5em 1em;
-    width: 12em;
-    margin: 100px auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 200px;
+    background: #1c1c1c;
+    border: 1px solid #ffffff3e;
+    border-radius: 10px;
     overflow: hidden;
-    box-sizing: border-box;
+    margin: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
   }
   
   .terminal-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1.5em;
-    background-color: #333;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-    padding: 0 0.4em;
-    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #343434;
+    padding: 6px;
   }
   
   .terminal-controls {
-    float: right;
+    position: absolute;
+    left: 10px;
+    display: flex;
+    gap: 7px;
   }
   
   .control {
     display: inline-block;
-    width: 0.6em;
-    height: 0.6em;
-    margin-left: 0.4em;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
     background-color: #777;
   }
@@ -75,18 +71,20 @@
   }
   
   .terminal-title {
-    float: left;
-    line-height: 1.5em;
-    color: #eee;
+    color: #eeeeeec1;
   }
   
+  .content {
+    padding: 10px;
+  }
   .text {
     display: inline-block;
     white-space: nowrap;
     overflow: hidden;
-    border-right: 0.2em solid green; /* Cursor */
+    border-right: 2px solid green;
     animation: typeAndDelete 4s steps(11) infinite,
       blinkCursor 0.5s step-end infinite alternate;
-    margin-top: 1.5em;
+    color: rgb(0, 196, 0);
+    font-weight: 600;
   }
   
