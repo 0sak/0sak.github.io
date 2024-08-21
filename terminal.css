@@ -30,7 +30,6 @@
     position: relative;
     overflow: hidden;
     box-sizing: border-box;
-    animation-delay: 6s;
   }
   
   .terminal-header {
