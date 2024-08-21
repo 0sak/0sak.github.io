@@ -29,7 +29,7 @@
 
   #hideMe{
     animation-fill-mode: forwards;
-    animation: cssAnimation 0s ease-in 5s forwards;
+    animation: cssAnimation 0s ease-in 8s forwards;
   }
 
   @keyframes cssAnimation {
@@ -38,4 +38,15 @@
         height:0;
         overflow:hidden;
     }
+}
+
+#showMe{
+  animation-fill-mode: backwards;
+  animation: cssShow 0s ease-in 8s backwards;
+}
+
+@keyframes cssShow {
+  to {
+      overflow:visible;
+  }
 }
