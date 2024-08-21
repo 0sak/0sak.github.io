@@ -11,13 +11,9 @@
       width: 0;
     }
     45%,
-    55% {
-      width: 6.2em;
-    } /* adjust width based on content */
-    90%,
     100% {
-      width: 0;
-    }
+      width: 100%;
+    } /* adjust width based on content */
   }
   
   .terminal-loader {
@@ -85,7 +81,7 @@
     white-space: nowrap;
     overflow: hidden;
     border-right: 0.2em solid green; /* Cursor */
-    animation: typeAndDelete 4s steps(11) infinite,
+    animation: typeAndDelete 6s steps(11) forwards,
       blinkCursor 0.5s step-end infinite;
     margin-top: 1.5em;
   }
