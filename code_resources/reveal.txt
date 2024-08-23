@@ -1,20 +1,20 @@
 function toggle_visibility(cl){<br>
-    var els = document.getElementsByClassName(cl);
-    for (var i = 0; i < els.length; i++){<br>
-       var s = els[i].style;<br>
-       s.visibility = "visible";<br>
-    }<br>
+&emsp;var els = document.getElementsByClassName(cl);<br>
+&emsp;for (var i = 0; i < els.length; i++){<br>
+&emsp;&emsp;var s = els[i].style;<br>
+&emsp;&emsp;s.visibility = "visible";<br>
+&emsp;}<br>
  }<br>
 <br>
 setTimeout(function() {<br>
-    toggle_visibility('showMe');<br>
+&emsp;toggle_visibility('showMe');<br>
 }, 5000);<br>
 <br>
 fetch("code_resources/reveal.txt")<br>
-  .then((res) => res.text())<br>
-  .then((text) => {<br>
-    console.log(text);<br>
-    document.getElementById("thisProject").innerHTML=text;<br>
-   })<br>
-  .catch((e) => console.error(e));<br>
+.then((res) => res.text())<br>
+.then((text) => {<br>
+&emsp;console.log(text);<br>
+&emsp;document.getElementById("thisProject").innerHTML=text;<br>
+})<br>
+.catch((e) => console.error(e));<br>
   

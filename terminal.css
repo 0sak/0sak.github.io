@@ -3,6 +3,9 @@
     50% {
       border-right-color: transparent;
     }
+    100%{
+      border-right-color:transparent;
+    }
   }
   
   @keyframes typeAndDelete {
@@ -18,7 +21,7 @@
   
   .terminal-loader {
     width: 80%;
-    height: 100%;
+    height: 300px;
     border: 0.1em solid #333;
     background-color: #1a1a1a;
     color: #0f0;
@@ -82,7 +85,8 @@
     overflow: hidden;
     border-right: 0.2em solid green; /* Cursor */
     animation: typeAndDelete 6s steps(11) forwards,
-      blinkCursor 0.5s step-end infinite;
+      blinkCursor 6s step-end forwards;
     margin-top: 1.5em;
+    height:225px;
   }
   

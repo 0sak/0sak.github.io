@@ -1,46 +1,46 @@
-/* (C)2024 */
-package CBuilder;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
-import java.util.stream.Stream;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.MethodSource;
-
-public class TestReference {
-    String testClass = "[REFERENCE]\n";
-
-    private static Stream<String> sources() {
-        return Stream.of("ref1", "ref2");
-    }
-
-    @ParameterizedTest
-    @MethodSource("sources")
-    void constructor(String name) {
-        Reference ref = new Reference(name);
-
-        System.out.println(testClass + ref.getName());
-
-        assertEquals(name, ref.getName());
-    }
-
-    @ParameterizedTest
-    @MethodSource("sources")
-    void build_expression(String name) {
-        Reference ref = new Reference(name);
-
-        System.out.println(testClass + ref.buildExpression());
-
-        assertEquals(name, ref.buildExpression());
-    }
-
-    @ParameterizedTest
-    @MethodSource("sources")
-    void build_statement(String name) {
-        Reference ref = new Reference(name);
-
-        System.out.println(testClass + ref.buildStatement());
-
-        assertEquals(name + ";\n", ref.buildStatement());
-    }
+/* (C)2024 */<br>
+package CBuilder;<br>
+<br>
+import static org.junit.jupiter.api.Assertions.assertEquals;<br>
+<br>
+import java.util.stream.Stream;<br>
+import org.junit.jupiter.params.ParameterizedTest;<br>
+import org.junit.jupiter.params.provider.MethodSource;<br>
+<br>
+public class TestReference {<br>
+&emsp;String testClass = "[REFERENCE]";<br>
+<br>
+&emsp;private static Stream<String> sources() {<br>
+&emsp;&emsp;return Stream.of("ref1", "ref2");<br>
+&emsp;}<br>
+<br>
+&emsp;@ParameterizedTest<br>
+&emsp;@MethodSource("sources")<br>
+&emsp;void constructor(String name) {<br>
+&emsp;&emsp;Reference ref = new Reference(name);<br>
+<br>
+&emsp;&emsp;System.out.println(testClass + ref.getName());<br>
+<br>
+&emsp;&emsp;assertEquals(name, ref.getName());<br>
+&emsp;}<br>
+<br>
+&emsp;@ParameterizedTest<br>
+&emsp;@MethodSource("sources")<br>
+&emsp;void build_expression(String name) {<br>
+&emsp;&emsp;Reference ref = new Reference(name);<br>
+<br>
+&emsp;&emsp;System.out.println(testClass + ref.buildExpression());<br>
+<br>
+&emsp;&emsp;assertEquals(name, ref.buildExpression());<br>
+&emsp;}<br>
+<br>
+&emsp;@ParameterizedTest<br>
+&emsp;@MethodSource("sources")<br>
+&emsp;void build_statement(String name) {<br>
+&emsp;&emsp;Reference ref = new Reference(name);<br>
+<br>
+&emsp;&emsp;System.out.println(testClass + ref.buildStatement());<br>
+<br>
+&emsp;&emsp;assertEquals(name + ";", ref.buildStatement());<br>
+&emsp;}<br>
 }

@@ -1,0 +1,22 @@
+import pymysql<br>
+from app import app<br>
+from config import mysql<br>
+from flask import jsonify<br>
+from flask import flash, request<br>
+import time<br>
+<br>
+@app.route("/USERS")<br>
+def emp():<br>
+&emsp;try:<br>
+&emsp;&emsp;conn = mysql.connect()<br>
+&emsp;&emsp;cursor = conn.cursor(pymysql.cursors.DictCursor)<br>
+&emsp;&emsp;cursor.execute("SELECT , FIRST_NAME, NAME, EMAIL, PASSWORD FROM USER")<br>
+&emsp;&emsp;empRows = cursor.fetchall()<br>
+&emsp;&emsp;respone = jsonify(empRows)<br>
+&emsp;&emsp;respone.status_code = 200<br>
+&emsp;&emsp;return respone<br>
+&emsp;except Exception as e:<br>
+&emsp;&emsp;print(e)<br>
+&emsp;finally:<br>
+&emsp;&emsp;cursor.close()<br>
+&emsp;&emsp;conn.close()
