@@ -20,3 +20,7 @@
   .showMe{
     visibility: hidden;
   }
+
+  .showMore{
+    color: #0f0;
+  }
