@@ -14,5 +14,6 @@ fetch("code_resources/reveal.txt")
   .then((res) => res.text())
   .then((text) => {
     console.log(text);
+    document.getElementById("thisProject").innerHTML=text;
    })
   .catch((e) => console.error(e));
