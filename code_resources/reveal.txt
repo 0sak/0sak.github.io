@@ -1,11 +1,11 @@
-function toggle_visibility(cl){
-    var els = document.getElementsByClassName(cl);
-    for (var i = 0; i < els.length; i++){
-       var s = els[i].style;
-       s.visibility = "visible";
-    }
- }
-
-setTimeout(function() {
-    toggle_visibility('showMe');
+function toggle_visibility(cl){<br>
+    var els = document.getElementsByClassName(cl);<br>
+    for (var i = 0; i < els.length; i++){<br>
+       var s = els[i].style;<br>
+       s.visibility = "visible";<br>
+    }<br>
+ }<br>
+<br>
+setTimeout(function() {<br>
+    toggle_visibility('showMe');<br>
 }, 5000);
