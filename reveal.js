@@ -45,3 +45,8 @@ fetch("code_resources/FlaskBackend.txt")
   document.getElementById("flaskBackend").innerHTML=text;
 })
 .catch((e) => console.error(e));
+
+window.onscroll = function () {
+  document.getElementById("scrollDown").style.display = "block";
+  document.getElementById("scrollDown").style.visibility = "hidden";
+};
