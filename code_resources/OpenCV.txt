@@ -1,0 +1,29 @@
+#include "ProcessImages.h"<br>
+#include "Metric.h"<br>
+<br>
+int main(int argc, char** argv)<br>
+{<br>
+&emsp;cv::utils::logging::setLogLevel(cv::utils::logging::LogLevel::LOG_LEVEL_SILENT);<br>
+&emsp;ProcessImages pc;<br>
+<br>
+&emsp;using std::chrono::high_resolution_clock;<br>
+&emsp;using std::chrono::duration_cast;<br>
+&emsp;using std::chrono::duration;<br>
+&emsp;using std::chrono::milliseconds;<br>
+<br>
+&emsp;auto t1 = high_resolution_clock::now();<br>
+<br>
+<br>
+&emsp;pc.initLabels();<br>
+&emsp;pc.execute();<br>
+<br>
+&emsp;auto t2 = high_resolution_clock::now();<br>
+<br>
+&emsp;auto ms_int = duration_cast<milliseconds>(t2 - t1);<br>
+<br>
+&emsp;duration<double, std::milli> ms_double = t2 - t1;<br>
+<br>
+&emsp;std::cout << "Time of execution in int " << ms_int.count() << " ms";<br>
+&emsp;std::cout << "Time of execution in double " << ms_double.count() << " ms";<br>
+&emsp;return 0;<br>
+}

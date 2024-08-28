@@ -1,0 +1,6 @@
+public static void main(String[] args) throws UnsupportedLookAndFeelException, ClassNotFoundException, InstantiationException, IllegalAccessException {<br>
+MiniPythonIDLEPOC myWindow = new MiniPythonIDLEPOC("MPyIDLEPOC");<br>
+&emsp;myWindow.setSize(1200, 800);
+&emsp;myWindow.setVisible(true);
+}
+<br>

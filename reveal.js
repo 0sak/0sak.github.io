@@ -46,6 +46,14 @@ fetch("code_resources/FlaskBackend.txt")
 })
 .catch((e) => console.error(e));
 
+fetch("code_resources/OpenCV.txt")
+.then((res) => res.text())
+.then((text) => {
+  console.log(text);
+  document.getElementById("opencv").innerHTML=text;
+})
+.catch((e) => console.error(e));
+
 window.onscroll = function () {
   document.getElementById("scrollDown").style.display = "block";
   document.getElementById("scrollDown").style.visibility = "hidden";
